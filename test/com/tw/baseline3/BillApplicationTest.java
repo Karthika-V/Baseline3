@@ -7,10 +7,10 @@ import static org.junit.Assert.*;
 public class BillApplicationTest {
 
     @Test
-    public void shouldHaveAStartToLaunchItsApplication() {
+    public void shouldTakeInputFromTheUser() {
         BillApplication billApplication = new BillApplication();
 
-        assertEquals("Bill",billApplication.start());
+        assertEquals("1 book at 12.49", billApplication.userInput());
 
     }
 
