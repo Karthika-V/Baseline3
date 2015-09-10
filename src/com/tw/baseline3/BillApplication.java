@@ -12,7 +12,8 @@ public class BillApplication {
 
     public void start() {
         userInput();
-        parser(userInput());
+        ItemParser itemParser = new ItemParser();
+        itemParser.parser(userInput());
     }
 
     public String userInput() {
@@ -20,14 +21,7 @@ public class BillApplication {
         return input;
     }
 
-    public String[] parser(String input) {
-        String[] tokens = input.split(" ");
-        String itemQty = tokens[0];
-        String itemName = tokens[1];
-        String itemPrice = tokens[3];
-        String[] item =new String[]{itemName,itemPrice,itemQty};
-        return item;
-    }
+
 
 
 }

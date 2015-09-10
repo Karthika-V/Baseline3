@@ -16,9 +16,9 @@ public class BillApplicationTest {
 
     @Test
     public void shouldHaveInputParserToParseInputDataAndGetTokensArrayOfLengthGreaterThanZero() {
-        BillApplication billApplication = new BillApplication();
+        ItemParser itemParser = new ItemParser();
 
-        assertEquals(true,billApplication.parser("1 book at 12.49").length>0);
+        assertEquals(true,itemParser.parser("1 book at 12.49").length>0);
     }
 
 }
