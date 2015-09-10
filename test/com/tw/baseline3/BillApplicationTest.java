@@ -2,6 +2,8 @@ package com.tw.baseline3;
 
 import org.junit.Test;
 
+import java.util.ArrayList;
+
 import static org.junit.Assert.*;
 
 public class BillApplicationTest {
@@ -18,7 +20,16 @@ public class BillApplicationTest {
     public void shouldHaveInputParserToParseInputDataAndGetTokensArrayOfLengthGreaterThanZero() {
         ItemParser itemParser = new ItemParser();
 
-        assertEquals(true,itemParser.parser("1 book at 12.49").length>0);
+        assertEquals(true, itemParser.parser("1 book at 12.49").length > 0);
     }
 
+    @Test
+    public void shouldHaveAShoppingBasketToCollectTheItemDetailsFromItemParser() {
+        BillApplication billApplication = new BillApplication();
+
+        String[] items = new String[]{"book", "12.49", "1"};
+        ArrayList<String> shoppingBasket = billApplication.addToShoppingBasket(items);
+
+        assertEquals(true, !shoppingBasket.isEmpty());
+    }
 }
