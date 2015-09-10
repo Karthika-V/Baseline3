@@ -8,11 +8,10 @@ public class ItemParserTest {
 
     @Test
     public void shouldParseInputDataAndGetTokensArrayOfLengthGreaterThanZero() {
-        ItemParser itemParser = new ItemParser();
-        String userInput = "1 book at 12.49";
+        UserInput userInput = new UserInput();
+        ItemParser itemParser = new ItemParser(userInput);
 
-
-        assertEquals(true,itemParser.parser(userInput).length>0);
+        assertEquals(true,itemParser.parser().length>0);
     }
 
 }

@@ -1,7 +1,6 @@
 package com.tw.baseline3;
 
 import java.util.ArrayList;
-import java.util.Scanner;
 
 //Bill Application starts the Application and takes input from the user.
 public class BillApplication {
@@ -15,8 +14,8 @@ public class BillApplication {
 
     public void start() {
         UserInput userInput = new UserInput();
-        ItemParser itemParser = new ItemParser();
-        String[] item = itemParser.parser(userInput.toString());
+        ItemParser itemParser = new ItemParser(userInput);
+        String[] item = itemParser.parser();
         addToShoppingBasket(item);
     }
 
