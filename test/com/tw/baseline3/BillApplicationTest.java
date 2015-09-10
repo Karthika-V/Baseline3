@@ -8,9 +8,9 @@ public class BillApplicationTest {
 
     @Test
     public void shouldTakeInputFromTheUser() {
-        BillApplication billApplication = new BillApplication();
+        UserInput userInput = new UserInput();
 
-        assertEquals("1 book at 12.49", billApplication.userInput());
+        assertEquals("1 book at 12.49", userInput.userInput());
 
     }
 

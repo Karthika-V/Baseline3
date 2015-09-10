@@ -11,17 +11,9 @@ public class BillApplication {
     }
 
     public void start() {
-        userInput();
+        UserInput userInput= new UserInput();
         ItemParser itemParser = new ItemParser();
-        itemParser.parser(userInput());
+        itemParser.parser(userInput.userInput());
     }
-
-    public String userInput() {
-        String input = "1 book at 12.49";
-        return input;
-    }
-
-
-
 
 }
