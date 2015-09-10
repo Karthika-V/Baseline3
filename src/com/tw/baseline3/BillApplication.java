@@ -12,11 +12,22 @@ public class BillApplication {
 
     public void start() {
         userInput();
+        parser(userInput());
     }
 
     public String userInput() {
         String input = "1 book at 12.49";
         return input;
     }
+
+    public String[] parser(String input) {
+        String[] tokens = input.split(" ");
+        String itemQty = tokens[0];
+        String itemName = tokens[1];
+        String itemPrice = tokens[3];
+        String[] item =new String[]{itemName,itemPrice,itemQty};
+        return item;
+    }
+
 
 }
